@@ -47,7 +47,7 @@ def forward_backward(observations: List, states: List[int], start_probability: L
     previous_forward = sum(forward_current[state] * transition_probability[state][end_state] for state in states)
 
     # This is the backward part of this algorithm
-    for index, observation_plus in enumerate(reversed(observations[1:] + [None, ])):     # TODO -> Original code used `(None,)` as a tuple, Pycharm claimed "unexpected"
+    for index, observation_plus in enumerate(reversed(observations[1:] + [None, ])):    # Original code used `(None,)` as a tuple, Pycharm claimed "unexpected"
         backward_current = {}
 
         for state in states:
