@@ -4,9 +4,12 @@ def number(num):
     return float(num)
 
 
-def normalize(array):
+def normalize(arr):
     """ Normalize the values and make sure they sum to 1.zero """
-    pass
+    sumarr = number(sum(arr))
+    if sumarr != 0.0:
+        for i in range(len(arr)):
+            arr[i] = arr[i] / sumarr
 
 
 # A probable and finite automaton model's state (I,F,S,T
