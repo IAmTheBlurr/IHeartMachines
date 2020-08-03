@@ -1,0 +1,2 @@
+1. Don't be lazy with naming.  Don't use "num" when it's really "number"
+2. Make sure you're using type hinting or at the very least that you are including the implied desired type within the name of input parameters (i.e. my_int)
